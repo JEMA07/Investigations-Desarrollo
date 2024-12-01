@@ -1,0 +1,18 @@
+{
+  "name": "restaurante",
+  "version": "1.0.0",
+  "description": "Proyecto Django con Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "cross-env NODE_ENV=production tailwindcss -i ./Restaura/static/src/styles.css -o ./Restaura/static/dist/output.css --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "cross-env": "^7.0.3"
+  }
+}
