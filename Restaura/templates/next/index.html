@@ -1,0 +1,224 @@
+{% extends "layaut/layaut.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Restaurante</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link href="./output.css" rel="stylesheet">
+
+
+    </head>
+    <body class="bg-gray-100 text-gray-800">
+   {% block  content%}
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary m-3 py-3">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            data-mdb-collapse-init
+            class="navbar-toggler"
+            type="button"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                height="15"
+                alt="MDB Logo"
+                loading="lazy"
+              />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            <!-- Notifications -->
+            <div class="dropdown">
+              <a
+                data-mdb-dropdown-init
+                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Some news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown">
+              <a
+                data-mdb-dropdown-init
+                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  class="rounded-circle"
+                  height="25"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">My profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+     
+      <main>
+           <section class="vh-100">
+              <div class="container-fluid h-custom">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                      class="img-fluid" alt="Sample image">
+                  </div>
+                  <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form method="POST">
+                      <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                          <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                          <i class="fab fa-twitter"></i>
+                        </button>
+                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                          <i class="fab fa-linkedin-in"></i>
+                        </button>
+                      </div>
+                      <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                      </div>
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" id="form3Example3" class="form-control form-control-lg"
+                          placeholder="Enter a valid email address" />
+                        <label class="form-label" for="form3Example3">Email address</label>
+                      </div>
+
+                      <!-- Password input -->
+                      <div data-mdb-input-init class="form-outline mb-3">
+                        <input type="password" id="form3Example4" class="form-control form-control-lg"
+                          placeholder="Enter password" />
+                        <label class="form-label" for="form3Example4">Password</label>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                          <label class="form-check-label" for="form2Example3">
+                            Remember me
+                          </label>
+                        </div>
+                        <a href="#!" class="text-body">Forgot password?</a>
+                      </div>
+                      <div class="text-center text-lg-start mt-4 pt-2">
+                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                          style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                            class="link-danger">Register</a></p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+                  <a href="#!" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#!" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#!" class="text-white me-4">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a href="#!" class="text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+                <!-- Right -->
+              </div>
+            </section>
+      </main>
+      
+        <footer class="bg-green-600 text-black p-4 text-center">
+            <p>&copy; 2024 Restaurante . Todos los derechos reservados.</p>
+        </footer>
+
+  <script>
+    
+  </script>
+
+    {% endblock  %}
+       
+    
+
+    
+    </body>
+</html>
